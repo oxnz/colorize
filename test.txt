@@ -1,0 +1,14 @@
+a fdafda
+a warning fdsa
+a error d
+[INFO] fdas
+[WARNING] fda
+[WARN] fda [WARN]
+[ERROR] fda
+[DEBUG] fdasfad
+fda "fda" fdsa
+fda " fda fda fd" fda
+fda " fda fda fd " fd
+fda 'fd' fd
+fd ' fd ' fd
+fd ' fd fd fd ' fd
