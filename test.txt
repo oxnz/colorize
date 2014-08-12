@@ -1,14 +1,25 @@
-a fdafda
-a warning fdsa
-a error d
-[INFO] fdas
-[WARNING] fda
-[WARN] fda [WARN]
-[ERROR] fda
-[DEBUG] fdasfad
-fda "fda" fdsa
-fda " fda fda fd" fda
-fda " fda fda fd " fd
-fda 'fd' fd
-fd ' fd ' fd
-fd ' fd fd fd ' fd
+good grief!
+hello world.
+This is an error.
+error occurred while reading.
+[INFO] this is info
+[INFO]: this is info
+[WARNING] warning warn a lot
+[WARNING]: warning warn a lot
+[WARN] two warn [WARN]
+[WARN]: two warn [WARN]
+[ERROR] error fatal error can't be resolved
+[ERROR]: error fatal error can't be resolved
+[DEBUG] info
+[DEBUG]: info
+[fatal error] this is a fatal error!
+[fatal error]: this is a fatal error!
+fatal error: this is a fatal error!
+error: this is a fatal error!
+fatal: this is a fatal error!
+single quote 'hello'
+single quote 'hello world'
+single quote ' hello world '
+double quote "hello"
+double quote "hello world"
+double quote " hello world "
