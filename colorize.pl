@@ -16,24 +16,56 @@ use warnings;
 		'default'	=> 39
 	);
 
+	my %fonts = (
+		'normal'=> '00',
+		'bold'	=> '01'
+	);
+
 	my %levels = (
-		'debug|(\[debug\]):?' => 'cyan',
-		'info|(\[info\]):?'	=> 'green',
-		'((warn(ing)?)|(\[warn(ing)?\])):?'	=> 'yellow',
-		'(((fatal )?error)|(\[(fatal )?error\])|fatal):?'	=> 'red',
+		'(D|d)ebug:|\[(D|d)ebug\](:|)' => {
+			'color'	=> 'cyan',
+			'font'	=> 'normal'
+		},
+		'info|(\[info\]):?'	=> {
+			'color'	=> 'green',
+			'font'	=> 'normal'
+		},
+		'((warn(ing)?)|(\[warn(ing)?\])):?'	=> {
+			'color'	=> 'yellow',
+			'font'	=> 'normal'
+		},
+		'error:|\[error\]:?' => {
+			'color'	=> 'red',
+			'font'	=> 'normal'
+		},
+		'fatal( error|):|\[fatal( error|)\]:?' => {
+			'color'	=> 'red',
+			'font'	=> 'bold'
+		}
 	);
 
 	my %keywords = (
-		'\'.*?\''	=> 'blue', # single quote
-		'\".*?\"'	=> 'magneta', # double quote
+		'\'.*?\''	=> {
+			'color'	=> 'blue', # single quote
+			'font'	=> 'normal'
+		},
+		'\".*?\"'	=> {
+			'color'	=> 'magneta', # double quote
+			'font'	=> 'bold'
+		}
 	);
 
+
+	#foreach my $font (keys %fonts) {
+	#	print $fonts{$font}{'color'}, "\n";
+	#}
+	#exit;
 	sub colorize {
-		while (my ($level, $color) = each %levels) {
-			s/(^$level)/\e[$colors{$color}m$1\e[m/i;
+		foreach my $level (keys %levels) {
+			last if s/(^$level)/\e[$fonts{$levels{$level}{'font'}};$colors{$levels{$level}{'color'}}m$1\e[m/i;
 		}
 		foreach my $keyword (%keywords) {
-			s/($keyword)/\e[$colors{$keywords{$keyword}}m$1\e[m/g;
+			s/($keyword)/\e[$fonts{$keywords{$keyword}{'font'}};$colors{$keywords{$keyword}{'color'}}m$1\e[m/g;
 		}
 	}
 }

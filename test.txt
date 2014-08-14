@@ -2,21 +2,41 @@ good grief!
 hello world.
 This is an error.
 error occurred while reading.
-[INFO] this is info
-[INFO]: this is info
-[WARNING] warning warn a lot
-[WARNING]: warning warn a lot
-[WARN] two warn [WARN]
-[WARN]: two warn [WARN]
-[ERROR] error fatal error can't be resolved
-[ERROR]: error fatal error can't be resolved
+debug: info
+Debug: info
+DEBUG: info
 [DEBUG] info
 [DEBUG]: info
+Info: this is info
+INFO: this is info
+[INFO] this is info
+[INFO]: this is info
+Warning: warning warn a lot
+WARNING: warning warn a lot
+[WARNING] warning warn a lot
+[WARNING]: warning warn a lot
+Warn: two warn [WARN]
+WARN: two warn [WARN]
+[WARN] two warn [WARN]
+[WARN]: two warn [WARN]
+Error: error fatal error can't be resolved
+ERROR: error fatal error can't be resolved
+[ERROR] error fatal error can't be resolved
+[ERROR]: error fatal error can't be resolved
+fatal error: this is a fatal error!
+Fatal error: this is a fatal error!
+Fatal Error: this is a fatal error!
 [fatal error] this is a fatal error!
 [fatal error]: this is a fatal error!
-fatal error: this is a fatal error!
 error: this is a fatal error!
+Error: this is a fatal error!
+[ERROR] this is a fatal error!
+[ERROR]: this is a fatal error!
 fatal: this is a fatal error!
+Fatal: this is a fatal error!
+[fatal] this is a fatal error!
+[fatal]: this is a fatal error!
+[FATAL]: this is a fatal error!
 single quote 'hello'
 single quote 'hello world'
 single quote ' hello world '
