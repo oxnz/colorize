@@ -2,15 +2,15 @@ good grief!
 hello world.
 This is an error.
 error occurred while reading.
-debug: info
+debug: debug: [debug] [debug]: info
 Debug: info
 DEBUG: info
-[DEBUG] info
+[DEBUG] (test) (test)info
 [DEBUG]: info
-Info: this is info
+Info: this is %20 hi %30 %40 info
 INFO: this is info
-[INFO] this is info
-[INFO]: this is info
+[INFO] this is %80fda info
+[INFO]: this is %30 info
 Warning: warning warn a lot
 WARNING: warning warn a lot
 [WARNING] warning warn a lot
@@ -19,8 +19,8 @@ Warn: two warn [WARN]
 WARN: two warn [WARN]
 [WARN] two warn [WARN]
 [WARN]: two warn [WARN]
-Error: error fatal error can't be resolved
-ERROR: error fatal error can't be resolved
+Error: error fatal {tes fdsafsda} error can't be resolved
+ERROR: error fatal error can't be{ fda} resolved
 [ERROR] error fatal error can't be resolved
 [ERROR]: error fatal error can't be resolved
 fatal error: this is a fatal error!
