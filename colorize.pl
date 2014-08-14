@@ -22,34 +22,34 @@ use warnings;
 	);
 
 	my %levels = (
-		'(D|d)ebug:|\[(D|d)ebug\](:|)' => {
+		qr/(D|d)ebug:|\[(D|d)ebug\](:|)/i => {
 			'color'	=> 'cyan',
 			'font'	=> 'normal'
 		},
-		'info|(\[info\]):?'	=> {
+		qr/info|(\[info\]):?/i => {
 			'color'	=> 'green',
 			'font'	=> 'normal'
 		},
-		'((warn(ing)?)|(\[warn(ing)?\])):?'	=> {
+		qr/((warn(ing)?)|(\[warn(ing)?\])):?/i => {
 			'color'	=> 'yellow',
 			'font'	=> 'normal'
 		},
-		'error:|\[error\]:?' => {
+		qr/error:|\[error\]:?/i => {
 			'color'	=> 'red',
 			'font'	=> 'normal'
 		},
-		'fatal( error|):|\[fatal( error|)\]:?' => {
+		qr/fatal( error|):|\[fatal( error|)\]:?/i => {
 			'color'	=> 'red',
 			'font'	=> 'bold'
 		}
 	);
 
 	my %keywords = (
-		'\'.*?\''	=> {
+		qr/\'.*?\'/	=> {
 			'color'	=> 'blue', # single quote
 			'font'	=> 'normal'
 		},
-		'\".*?\"'	=> {
+		qr/\".*?\"/	=> {
 			'color'	=> 'magneta', # double quote
 			'font'	=> 'bold'
 		}
@@ -61,8 +61,8 @@ use warnings;
 	#}
 	#exit;
 	sub colorize {
-		foreach my $level (keys %levels) {
-			last if s/(^$level)/\e[$fonts{$levels{$level}{'font'}};$colors{$levels{$level}{'color'}}m$1\e[m/i;
+		foreach my $pattern (keys %levels) {
+			last if s/(^$pattern)/\e[$fonts{$levels{$pattern}{'font'}};$colors{$levels{$pattern}{'color'}}m$1\e[m/i;
 		}
 		foreach my $keyword (%keywords) {
 			s/($keyword)/\e[$fonts{$keywords{$keyword}{'font'}};$colors{$keywords{$keyword}{'color'}}m$1\e[m/g;
