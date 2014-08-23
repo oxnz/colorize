@@ -22,7 +22,8 @@ use warnings;
 
 	my %fonts = (
 		'normal'=> '00',
-		'bold'	=> '01'
+		'bold'	=> '01',
+		'underline'	=> '04',
 	);
 
 	my %levels = (
