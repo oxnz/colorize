@@ -3,11 +3,13 @@
 # Author: nz
 # Email: yunxinyi@gmail.com
 # Version: 0.1
+# Description: a utility used for colorize the output of compiler, etc.
 
 use strict;
 use warnings;
 
 {
+	# static variables
 	my %colors = (
 		'black'	=> 30,
 		'red'	=> 31,
@@ -23,7 +25,11 @@ use warnings;
 	my %fonts = (
 		'normal'=> '00',
 		'bold'	=> '01',
+		'faint'	=> '02',
 		'underline'	=> '04',
+		'negative'	=> '07',
+		'conceal'	=> '08',
+		'crossed'	=> '09',
 	);
 
 	my %levels = (
@@ -83,9 +89,12 @@ use warnings;
 	}
 }
 
-while (<>) {
-	&colorize;
-	print;
+# sub main
+{
+	while (<>) {
+		&colorize;
+		print;
+	}
 }
 
 __END__
